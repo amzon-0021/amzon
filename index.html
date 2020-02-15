@@ -29,4 +29,15 @@
 <p align="center">オーナーは、amzon_0021です</p>
 <a href="yahoo.html">ホームに移動</a>
 </body>
+<body>
+<?php
+session_start();
+ 
+if(!isset($_SESSION["user_name"])) {
+    $no_login_url = "index.php";
+    header("Location: {$no_login_url}");
+    exit;
+}
+?>
+</body>
 </html>
